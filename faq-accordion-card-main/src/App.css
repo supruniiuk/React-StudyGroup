@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
 *, ::after, ::before, html,  body{
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +10,23 @@ html, body {
 }
 body{
   background: linear-gradient(to top left, hsl(273, 75%, 66%),  hsl(240, 73%, 65%));
+  font-family: Kumbh Sans;
+  padding-top: 100px;
 }
-p{
-  font-size: 50px;
+
+
+/* Card */
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+  background-color: aliceblue;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(31, 31, 31, 0.5);
+}
+.card:hover{
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }

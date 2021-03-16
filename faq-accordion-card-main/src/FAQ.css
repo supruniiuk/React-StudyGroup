@@ -1,0 +1,19 @@
+.questionBlock{
+    border-bottom: 0.5px solid rgb(129, 129, 129)
+}
+p{
+    padding: 20px;
+}
+.q{
+    display: flex;
+    justify-content: space-between;
+}
+.a{
+    display: none;
+}
+.questionBlock:hover .a {
+    display: block;
+}
+.questionBlock:hover .q {
+    font-weight: bold;
+}
