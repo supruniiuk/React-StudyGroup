@@ -1,7 +1,8 @@
 import './App.css';
-import FAQ from './FAQ.js'
-import questions from './Data'
-
+import FAQ from './FAQ/FAQ.js'
+import questions from './Data/Data'
+import woman from './Data/Woman'
+import box from './Data/Box'
 function App() {
 
   let content = <div><p>Hello</p></div>
@@ -18,11 +19,12 @@ function App() {
   return (
     <div className="App">
       <div className="card">
-      <div class = "girl">
-        <p>NOTHING SPECIAL</p>
-        </div>
+      <div className = "obj">
+        <div className = "woman">{woman}</div>
+        <div className = "box">{box}</div>
+      </div>
 
-        <div class = "questions">
+        <div className = "faq">
         <h1>FAQ</h1>
         {content}
         </div>

@@ -14,19 +14,35 @@ body{
   padding-top: 100px;
 }
 
-
 /* Card */
 .card{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2vw;
   background-color: aliceblue;
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
   padding: 70px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(31, 31, 31, 0.5);
 }
+
 .card:hover{
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.obj{
+  transform: translateX(-140px);
+}
+.woman{
+  position: absolute;
+}
+.box{
+  position: absolute;
+  padding-top: 120px;
+  transform: translateX(-30px);
+}
+
+.card:hover .box{
+  transform: translateX(-50px)
 }
