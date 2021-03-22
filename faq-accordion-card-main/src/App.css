@@ -5,32 +5,34 @@
   margin: 0;
   padding: 0;
 }
-html, body {
-  height: 100%;
-}
 body{
-  background: linear-gradient(to top left, hsl(273, 75%, 66%),  hsl(240, 73%, 65%));
+  background-image: repeating-linear-gradient(to top left, hsl(273, 75%, 66%),  hsl(240, 73%, 65%))  ;
+  background-size: 100% 100%;
   font-family: Kumbh Sans;
-  padding-top: 100px;
+  padding: 100px 40px;
 }
-
+html{
+  min-height: 100%;
+  min-width:100%;
+}
 /* Card */
 .card{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2vw;
   background-color: aliceblue;
-  width: 900px;
+  width: 80%;
   margin: 0 auto;
   padding: 70px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(31, 31, 31, 0.5);
 }
-
 .card:hover{
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-
+.picture{
+  display: none;
+}
 .obj{
   transform: translateX(-140px);
 }
@@ -41,8 +43,95 @@ body{
   position: absolute;
   padding-top: 120px;
   transform: translateX(-30px);
+  transition-duration: 0.4s;
 }
 
 .card:hover .box{
   transform: translateX(-50px)
+}
+@media(max-width:  1200px) {
+  .woman, .box{
+    transform: scale(0.8);
+    transition-duration: 0.4s;
+  }
+  .card:hover .box{
+    transform: translateX(-40px)
+  }
+}
+
+@media(max-width:  992px) {
+  body{
+    padding: 20px;
+    padding-top: 130px;
+  }
+  .card{
+    display: block;
+    width: 80%;
+    padding: 50px;
+  }
+  .obj{
+    display: none;
+  }
+  .faq h1{
+    text-align: center;
+  }
+  .picture{
+    display: flex;
+    justify-content: center;
+    transform: translateY(-170px);
+    transition-duration: 0.4s;
+    padding-bottom: 60px;
+  }
+  .wMobile{
+    position: absolute;
+  }
+  .faq{
+    padding-top: 0;
+  }
+} 
+@media(max-width: 768px) {
+  .card{
+    padding-top: 40px;
+    font-size: 14px;
+  }
+}
+@media(max-width: 480px) {
+  body{
+    padding: 10px;
+    padding-top: 110px;
+  }
+  .card{
+    padding: 10px;
+    font-size: smaller;
+  }
+  .wMobile{
+    transform: scale(0.7);
+    transition-duration: 0.4s;
+  }
+  .picture{
+    transform: translateY(-110px);
+    transition-duration: 0.4s;
+  }
+  .faq h1{
+    font-size: 17px;
+  }
+}
+
+@media(max-width: 320px) {
+  body{
+    padding: 10px;
+    padding-top: 100px;
+  }
+  .card{
+    padding: 10px;
+    font-size: smaller;
+  }
+  .wMobile{
+    transform: scale(0.6);
+    transition-duration: 0.4s;
+  }
+  .picture{
+    transform: translateY(-110px);
+    transition-duration: 0.4s;
+  }
 }

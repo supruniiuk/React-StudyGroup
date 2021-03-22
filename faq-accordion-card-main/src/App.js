@@ -3,6 +3,9 @@ import FAQ from './FAQ/FAQ.js'
 import questions from './Data/Data'
 import woman from './Data/Woman'
 import box from './Data/Box'
+import wMobile from './Data/WomanMobile'
+import shadow from './Data/ShadowMobile'
+
 function App() {
 
   let content = <div><p>Hello</p></div>
@@ -19,6 +22,9 @@ function App() {
   return (
     <div className="App">
       <div className="card">
+      <div class = "picture">
+        <div class = "wMobile">{wMobile}</div>
+      </div>
       <div className = "obj">
         <div className = "woman">{woman}</div>
         <div className = "box">{box}</div>
