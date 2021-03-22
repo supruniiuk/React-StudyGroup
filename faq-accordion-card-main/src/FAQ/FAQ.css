@@ -1,5 +1,6 @@
 .questionBlock{
-    border-bottom: 0.5px solid rgb(129, 129, 129)
+    border-bottom: 0.5px solid rgb(129, 129, 129);
+    cursor: pointer;
 }
 p{
     padding: 20px;
