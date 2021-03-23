@@ -4,7 +4,6 @@ import questions from './Data/Data'
 import woman from './Data/Woman'
 import box from './Data/Box'
 import wMobile from './Data/WomanMobile'
-import shadow from './Data/ShadowMobile'
 
 function App() {
 
@@ -22,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className="card">
+      
       <div class = "picture">
         <div class = "wMobile">{wMobile}</div>
       </div>

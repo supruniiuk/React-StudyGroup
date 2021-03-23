@@ -12,19 +12,22 @@ p{
 .a{
     display: none;
 }
+
 .qActive{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
 }
+
 .aShow {
     display: block;
 }
-.questionBlock:hover .q{
-    color: hsl(14, 88%, 65%);
-}
-
 .arrow{
     transform: rotate(180deg);
     transition: 1s;
 }
+
+.questionBlock:hover .q{
+    color: hsl(14, 88%, 65%);
+}
+
