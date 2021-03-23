@@ -55,12 +55,12 @@ html{
 
 
 @media(max-width:  1200px) {
+  .card:hover .box{
+    transform: translateX(-40px)
+  }
   .woman, .box{
     transform: scale(0.8);
     transition-duration: 0.4s;
-  }
-  .card:hover .box{
-    transform: translateX(-40px)
   }
   .card{
     max-width: 80%;
@@ -83,15 +83,21 @@ html{
   .faq h1{
     text-align: center;
   }
+  
   .picture{
-    display: flex;
+    display:flex;
     justify-content: center;
-    transform: translateY(-170px);
     transition-duration: 0.4s;
-    padding-bottom: 60px;
+    transform: translateY(-170px);
+    padding: -200px;
   }
-  .wMobile{
+  .picture:after{
+    content: url("./Data/bg-pattern-mobile.svg");
     position: absolute;
+    width: 100%;
+    margin-top: 110px;
+    text-align: center;
+    margin-left: 20px;
   }
   .faq{
     padding-top: 0;
@@ -106,6 +112,9 @@ html{
     padding-top: 40px;
     font-size: 14px;
   }
+  .picture{
+    transform: translateY(-150px);
+  }
 }
 @media(max-width: 480px) {
   body{
@@ -117,15 +126,23 @@ html{
     font-size: smaller;
   }
   .wMobile{
-    transform: scale(0.7);
+    transform: scale(0.8);
     transition-duration: 0.4s;
   }
+  .picture::after{
+    transform: scale(0.8);
+    margin-top: 90px;
+    margin-left: 15px;
+  }
   .picture{
-    transform: translateY(-110px);
+    transform: translateY(-120px);
     transition-duration: 0.4s;
   }
   .faq h1{
     font-size: 17px;
+  }
+  .wMobile::after{
+    size: 0.5;
   }
 }
 
@@ -145,5 +162,9 @@ html{
   .picture{
     transform: translateY(-110px);
     transition-duration: 0.4s;
+  }
+  .picture::after{
+    transform: scale(0.6);
+    margin-left: 0;
   }
 }
