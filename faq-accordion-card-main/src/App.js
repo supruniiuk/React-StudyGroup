@@ -4,12 +4,10 @@ import questions from './Data/Data'
 import woman from './Data/Woman'
 import box from './Data/Box'
 import wMobile from './Data/WomanMobile'
-import shadow from './Data/ShadowMobile';
 
 function App() {
 
-  let content = <div><p>Hello</p></div>
-  console.log(questions)
+  let content = <div><p>FAQ</p></div>
   content = questions.map((q, index) => {
     return(
     <FAQ
