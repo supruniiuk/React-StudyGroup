@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+*, ::after, ::after, html,  body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: repeating-linear-gradient(to top left, hsl(273, 75%, 66%),  hsl(240, 73%, 65%))  ;
+  background-size: 100% 100%;
+  font-family: Kumbh Sans;
+  padding: 100px 40px;
+}
+html{
+  min-height: 100%;
+  min-width:100%;
+}
+
+/* Card */
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+  background-color: aliceblue;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(31, 31, 31, 0.5);
+}
+.card:hover{
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+/* Woman and box */
+.picture{
+  display: none;
+}
+.obj{
+  display: flex;
+  transform: translateX(-140px);
+  z-index: 1;
+}
+.woman{
+  display: flex;
+  position: absolute;
+}
+.woman::after{
+  content: url("./Data/bg-pattern-desktop.svg") ;
+    position: absolute;
+    height: 50%;
+    transform: scale(0.5) translateY(-200px) translateX(-500px);
+    z-index: -1;
+}
+.box{
+  position: absolute;
+  padding-top: 120px;
+  transform: translateX(-30px);
+  transition-duration: 0.4s;
+}
+.card:hover .box{
+  transform: translateX(-50px);
+}
+
+
+@media(max-width:  1200px) {
+  .card:hover .box{
+    transform: translateX(-40px)
+  }
+  .woman, .box{
+    transform: scale(0.8);
+    transition-duration: 0.4s;
+  }
+  .card{
+    max-width: 80%;
+  }
+  .woman::after{
+      transform: scale(0.5) translateY(-200px) translateX(-500px);
+  }
+}
+
+@media(max-width:  992px) {
+  body{
+    padding: 20px;
+    padding-top: 130px;
+  }
+  .card{
+    display: block;
+    width: 80%;
+    padding: 50px;
+  }
+  .obj{
+    display: none;
+  }
+  .faq h1{
+    text-align: center;
+  }
+  .picture{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+  }
+  .wMobile{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    transform: translateY(-170px);
+  }
+  .wMobile::after{
+    content: url("./Data/bg-pattern-mobile.svg");
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 30px;
+    z-index: -1;
+
+  }
+  .faq{
+    padding-top: 0;
+  }
+} 
+@media(max-width: 768px) {
+  body{
+    padding: 30px;
+    padding-top: 140px;
+  }
+  .card{
+    padding: 40px;
+    font-size: 14px;
+  }
+  .picture{
+    height: 100px;
+  }
+  .wMobile{
+    transform: translateY(-160px);
+  }
+}
+@media(max-width: 480px) {
+  body{
+    padding: 10px;
+    padding-top: 110px;
+  }
+  .card{
+    padding: 10px;
+    font-size: smaller;
+  }
+  .faq h1{
+    font-size: 17px;
+  }
+  .picture{
+    transform: scale(0.8);
+  }
+  .wMobile{
+    transform: translateY(-140px);
+  }
+}
+
+@media(max-width: 320px) {
+  body{
+    padding: 10px;
+    padding-top: 100px;
+  }
+  .card{
+    padding: 10px;
+    font-size: smaller;
+  }
+}
