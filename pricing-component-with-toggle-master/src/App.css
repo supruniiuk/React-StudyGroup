@@ -86,3 +86,13 @@ input:checked + .slider:before {
   font-weight: 700;
 }
 /* PICKER END */
+
+
+/* CARDS START */
+.cards{
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(1fr, 3);
+  grid-column-gap: 10px;
+}
+/* CARDS END */
