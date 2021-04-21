@@ -1,7 +1,7 @@
 import "./Card.css";
 const Card = (props) => {
   let info = props.content.map((i) => {
-    return <p className = "info">{i}</p>;
+    return <p className="info">{i}</p>;
   });
 
   return (
@@ -9,7 +9,9 @@ const Card = (props) => {
       <p className="type">{props.type}</p>
       <p className="price">{props.price}</p>
       <div>{info}</div>
-      <button>Learn more</button>
+      <a class="button" href={props.link}  target="_blank">
+        <button type="button">Learn more</button>
+      </a>
     </div>
   );
 };

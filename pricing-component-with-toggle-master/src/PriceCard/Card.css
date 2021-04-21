@@ -1,42 +1,62 @@
-.Card{
-    box-shadow: 0 0 10px hsla(234, 14%, 74%, 0.507);
-    padding: 35px 20px;
-    border-radius: 5px;
-    font-weight: 700;
-    color: hsl(233, 13%, 49%);
-    z-index: 1;
-    background-color: white;
+.Card {
+  box-shadow: 0 0 10px hsla(234, 14%, 74%, 0.507);
+  padding: 35px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+  z-index: 1;
+  background-color: white;
+  transition-duration: 1s;
 }
-.type{
-    margin-bottom: 25px;
+.type {
+  margin-bottom: 25px;
 }
-.price{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: hsl(232, 13%, 33%);
+.price {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: hsl(232, 13%, 33%);
 }
-.info{
-    border-top: 1px solid hsla(234, 14%, 74%, 0.507);
-    padding: 13px;
-    font-size: 15px;
-    font-weight: 600;
+.info {
+  border-top: 1px solid hsla(234, 14%, 74%, 0.507);
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 600;
 }
-.info:last-child{
-    border-bottom: 1px solid hsla(234, 14%, 74%, 0.507);
+.info:last-child {
+  border-bottom: 1px solid hsla(234, 14%, 74%, 0.507);
 }
 
+button {
+  margin-top: 25px;
+  padding: 7px 70px;
+  outline: none;
+  border: 2px solid hsl(234, 14%, 74%);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(240, 78%, 98%);
+  cursor: pointer;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
 
-button{
-    margin-top: 25px;
-    background-color:  hsl(240, 78%, 98%);
-    padding: 7px 70px;
-    outline: none;
-    border: 2px solid hsl(234, 14%, 74%);
-    border-radius: 5px;
-    font-family: Montserrat;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: hsl(233, 13%, 49%);
-    cursor: pointer;
-    letter-spacing: 1px;
+.Card:hover {
+  color: hsl(240, 78%, 98%);
+  background: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transform: scale(1.1);
+  z-index: 3;
+}
+.Card:hover .price {
+  color: hsl(240, 78%, 98%);
+}
+.Card:hover .info {
+  border-top: 1px solid hsl(240, 78%, 98%);
+}
+.Card:hover .info:last-child {
+  border-bottom: 1px solid hsl(240, 78%, 98%);
+}
+.Card:hover button {
+  background: hsl(240, 78%, 98%);
+  color: hsl(233, 13%, 49%);
 }

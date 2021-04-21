@@ -1,24 +1,25 @@
 import "./App.css";
 import year from "./info/year";
-import month from "./info/month"
-import Card from "./PriceCard/Card.js"
-import React, { useState } from 'react';
+import month from "./info/month";
+import Card from "./PriceCard/Card.js";
+import React, { useState } from "react";
 
 function App() {
   const [yearState, setYear] = useState(false);
-  let time = month
-  if(yearState){
-    time = year
+  let time = month;
+  if (yearState) {
+    time = year;
   }
   let content = time.map((suggestion) => {
-    return(
-    <Card
-    type = {suggestion.type}
-    price = {suggestion.price}
-    content = {suggestion.content}
-     />)
-  })
-  console.log("ys", yearState)
+    return (
+      <Card
+        type={suggestion.type}
+        price={suggestion.price}
+        content={suggestion.content}
+        link = {suggestion.link}
+      />
+    );
+  });
   return (
     <div className="App">
       <h2>Our Pricing</h2>
@@ -32,9 +33,7 @@ function App() {
         <p>Monthly</p>
       </div>
 
-      <div className="cards">
-        {content}
-      </div>
+      <div className="cards">{content}</div>
     </div>
   );
 }
