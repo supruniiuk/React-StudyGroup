@@ -16,7 +16,7 @@ function App() {
         type={suggestion.type}
         price={suggestion.price}
         content={suggestion.content}
-        link = {suggestion.link}
+        link={suggestion.link}
       />
     );
   });

@@ -9,7 +9,7 @@ const Card = (props) => {
       <p className="type">{props.type}</p>
       <p className="price">{props.price}</p>
       <div>{info}</div>
-      <a class="button" href={props.link}  target="_blank">
+      <a class="button" href={props.link} target="_blank">
         <button type="button">Learn more</button>
       </a>
     </div>

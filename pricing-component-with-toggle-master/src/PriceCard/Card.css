@@ -7,6 +7,7 @@
   z-index: 1;
   background-color: white;
   transition-duration: 1s;
+  max-width: 250px;
 }
 .type {
   margin-bottom: 25px;
@@ -59,4 +60,10 @@ button {
 .Card:hover button {
   background: hsl(240, 78%, 98%);
   color: hsl(233, 13%, 49%);
+}
+
+@media (max-width: 60px) {
+  .Card {
+    transform: scale(0.7);
+  }
 }
